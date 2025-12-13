@@ -1,57 +1,66 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
 import "../styles/WhatsAppPopup.css";
 
 export default function WhatsAppPopup() {
-  const [show, setShow] = useState(false);
-  const location = useLocation();
+  const [showPopup, setShowPopup] = useState(false);
+
+  const whatsappLink =
+    "https://wa.me/918337032260?text=Hello%20👋%0AI%20visited%20your%20trading%20website%20and%20need%20help%20regarding%20your%20services.";
 
   useEffect(() => {
-    // ✅ Show popup ONLY on Home page
-    if (location.pathname !== "/") return;
+    // 🔁 Popup every 5 seconds on ALL pages
+    const interval = setInterval(() => {
+      setShowPopup(true);
+    }, 5000);
 
-    // ✅ Show only once per session
-    const alreadyShown = sessionStorage.getItem("wa_popup_shown");
-    if (alreadyShown) return;
-
-    const timer = setTimeout(() => {
-      setShow(true);
-      sessionStorage.setItem("wa_popup_shown", "true");
-    }, 6000); // 6 seconds delay
-
-    return () => clearTimeout(timer);
-  }, [location.pathname]);
-
-  if (!show) return null;
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="wa-popup">
-      <button
-        className="wa-close"
-        onClick={() => setShow(false)}
-        aria-label="Close WhatsApp popup"
+    <>
+      {/* ================= FLOATING WHATSAPP BUTTON ================= */}
+      <a
+        href={whatsappLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="wa-floating-btn"
+        aria-label="Chat on WhatsApp"
       >
-        ×
-      </button>
+        <FaWhatsapp className="wa-float-icon" />
+      </a>
 
-      <div className="wa-body">
-        <div className="wa-icon">💬</div>
+      {/* ================= POPUP ================= */}
+      {showPopup && (
+        <div className="wa-popup">
+          <button
+            className="wa-close"
+            onClick={() => setShowPopup(false)}
+            aria-label="Close"
+          >
+            ×
+          </button>
 
-        <h4>Need Trading Assistance?</h4>
-        <p>
-          Our expert team is available on WhatsApp to help you with
-          trading, payments, and account setup.
-        </p>
+          <div className="wa-body">
+            <FaWhatsapp className="wa-popup-icon" />
 
-        <a
-          href="https://wa.me/918337032260?text=Hello%20%F0%9F%91%8B%0AI%20visited%20your%20trading%20website%20and%20need%20help%20regarding%20trading%20services.%0APlease%20guide%20me."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="wa-btn"
-        >
-          Chat on WhatsApp
-        </a>
-      </div>
-    </div>
+            <h4>Need Trading Assistance?</h4>
+            <p>
+              Our expert team is available on WhatsApp to help you with
+              trading, payments, and account setup.
+            </p>
+
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="wa-btn"
+            >
+              <FaWhatsapp /> Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      )}
+    </>
   );
 }

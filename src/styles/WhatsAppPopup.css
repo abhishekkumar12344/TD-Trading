@@ -1,46 +1,74 @@
-/* =========================
-   WHATSAPP POPUP (PRO)
-========================= */
+/* ================= FLOATING BUTTON ================= */
+.wa-floating-btn {
+  position: fixed;
+  bottom: env(safe-area-inset-bottom, 22px);
+  right: 18px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #25d366, #1ebe5d);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45);
+  z-index: 9999;
+  animation: pulse 2s infinite;
+  text-decoration: none;
+}
 
+.wa-float-icon {
+  font-size: 26px;
+  color: #ffffff;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* ================= POPUP ================= */
 .wa-popup {
   position: fixed;
   bottom: 90px;
-  right: 20px;
-  width: 300px;
-  background: #0b0f1a;
-  color: #dce3f1;
-  border-radius: 16px;
-  border: 1px solid rgba(0, 255, 255, 0.25);
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.25);
-  z-index: 9999;
-  animation: waSlideUp 0.4s ease;
+  right: 18px;
+  width: 320px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  z-index: 9998;
+  animation: slideUp 0.4s ease;
 }
 
-/* Slide animation */
-@keyframes waSlideUp {
+@keyframes slideUp {
   from {
-    transform: translateY(20px);
     opacity: 0;
+    transform: translateY(25px);
   }
   to {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* Close button */
 .wa-close {
   position: absolute;
   top: 8px;
   right: 10px;
-  background: none;
   border: none;
-  color: #fff;
-  font-size: 20px;
+  background: none;
+  font-size: 22px;
   cursor: pointer;
+  color: #555;
 }
 
-/* Body */
 .wa-body {
   padding: 22px;
   text-align: center;
@@ -52,41 +80,43 @@
 }
 
 .wa-body h4 {
-  color: #00eaff;
+  font-size: 1.1rem;
   margin-bottom: 8px;
+  color: #111;
 }
 
 .wa-body p {
-  font-size: 14px;
-  line-height: 1.5;
-  opacity: 0.85;
+  font-size: 0.9rem;
+  color: #555;
   margin-bottom: 16px;
 }
 
-/* CTA Button */
 .wa-btn {
   display: inline-block;
-  padding: 11px 20px;
+  padding: 10px 18px;
   background: #25d366;
-  color: black;
-  font-weight: 700;
-  border-radius: 10px;
+  color: #fff;
+  border-radius: 6px;
   text-decoration: none;
-  box-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
-  transition: 0.3s;
+  font-weight: 600;
+  transition: background 0.3s;
 }
 
 .wa-btn:hover {
-  transform: scale(1.05);
+  background: #1ebe5d;
 }
 
-/* =========================
-   MOBILE OPTIMIZATION
-========================= */
+/* ================= MOBILE FIX ================= */
 @media (max-width: 480px) {
   .wa-popup {
     width: 90%;
     right: 5%;
-    bottom: 80px;
+    bottom: 90px;
+  }
+
+  .wa-floating-btn {
+    width: 54px;
+    height: 54px;
+    bottom: 20px;
   }
 }

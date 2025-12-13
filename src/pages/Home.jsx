@@ -271,9 +271,7 @@ export default function Home() {
       {/* --------------------------------------
            FLOATING WHATSAPP BUTTON
       --------------------------------------- */}
-      <a className="whatsapp-btn" href="https://wa.me/918337032260" target="_blank" aria-label="Chat on WhatsApp">
-        <i className="fab fa-whatsapp"></i>
-      </a>
+      
 
      
     </div>
