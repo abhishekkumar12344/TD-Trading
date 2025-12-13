@@ -1,0 +1,169 @@
+/* ================= HERO SECTION ================= */
+.service-hero {
+  background-image: url("https://images.unsplash.com/photo-1642790773921-cc8ad13cf5df?auto=format&fit=crop&w=1400&q=80");
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero-overlay h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero-overlay p {
+  font-size: 18px;
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+
+.hero-btn {
+  padding: 12px 25px;
+  background: #00eaff;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 0 12px #00eaff;
+}
+
+/* ================= SERVICES GRID ================= */
+.service-grid {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.service-grid h2 {
+  margin-bottom: 30px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 25px;
+  border-radius: 12px;
+  color: white;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.service-card img {
+  width: 70px;
+  margin-bottom: 15px;
+}
+
+/* ================= WHY US ================= */
+.why-us {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.why-card {
+  padding: 20px;
+  border-radius: 10px;
+  background: #111827;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+/* ================= PAYMENTS ================= */
+.payments {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.pay-logos img {
+  height: 60px;
+  margin: 10px 20px;
+}
+
+/* ================= TESTIMONIALS ================= */
+.testimonials {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.test-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.test-card {
+  background: #111827;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+/* ================= FAQ ================= */
+.faq {
+  padding: 60px 20px;
+}
+
+.faq-item {
+  background: #111827;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+/* ================= CTA ================= */
+.cta {
+  padding: 60px 20px;
+  text-align: center;
+  background: #0b0f1a;
+  color: white;
+}
+
+.cta-btn {
+  padding: 12px 30px;
+  background: #00eaff;
+  border: none;
+  border-radius: 8px;
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 0 15px #00eaff;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .hero-overlay h1 {
+    font-size: 32px;
+  }
+}

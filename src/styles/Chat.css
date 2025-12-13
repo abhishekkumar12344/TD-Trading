@@ -1,0 +1,9 @@
+.chat-card{height:420px;display:flex;flex-direction:column}
+.messages{flex:1;overflow:auto;padding:8px}
+.chat-form{display:flex;gap:8px;padding-top:8px}
+.msg{margin:6px 0}
+.msg.user{text-align:right}
+.msg.admin{text-align:left}
+.bubble{display:inline-block;padding:8px 12px;border-radius:10px}
+.msg.user .bubble{background:linear-gradient(90deg,var(--accent),var(--gold));color:#001}
+.msg.admin .bubble{background:rgba(255,255,255,0.03);color:var(--muted)}

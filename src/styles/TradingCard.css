@@ -1,0 +1,7 @@
+.trading-card{display:flex;justify-content:space-between;align-items:center;padding:12px}
+.tc-symbol{font-weight:700;font-size:18px}
+.tc-sub{font-size:12px;color:var(--muted)}
+.tc-price{font-weight:700;font-size:18px;text-align:right}
+.tc-change{font-size:12px;text-align:right}
+.tc-change.up{color:#7ef59e}
+.tc-change.down{color:#ff9b9b}
