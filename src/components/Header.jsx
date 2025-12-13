@@ -3,41 +3,41 @@ import { Link } from "react-router-dom";
 import "../styles/Header.css";
 
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
-    <header className="header">
-      <div className="container header-inner">
+    <header className="site-header">
+      <div className="header-container">
 
-        {/* LOGO (NOW CLICKABLE WITHOUT REFRESH) */}
-        <Link to="/" className="logo" onClick={() => setMenuOpen(false)}>
-          <div className="mark">P</div>
-          <div>
-            <div className="brand" >COBRA TRADING</div>
-            <div className="tag">powerd by Benzinga</div>
-          </div>
+        {/* LOGO */}
+        <Link to="/" className="logo-area" onClick={() => setOpen(false)}>
+          <img src="/logo/logo.png" alt="Cobra Trading Logo" />
+          <span>COBRA TRADING</span>
         </Link>
 
-        {/* NAV */}
-        <nav className={`nav ${menuOpen ? "open" : ""}`}>
-          <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-          <Link to="/trading" onClick={() => setMenuOpen(false)}>Trading</Link>
-          <Link to="/services" onClick={() => setMenuOpen(false)}>Services</Link>
-          <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
-          <Link to="/payment" onClick={() => setMenuOpen(false)}>Payment</Link>
-          <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
-          <Link to="/chat" onClick={() => setMenuOpen(false)}>Chat</Link>
-        </nav>
-
-        {/* HAMBURGER */}
-        <div
-          className={`hamburger ${menuOpen ? "active" : ""}`}
-          onClick={() => setMenuOpen(!menuOpen)}
+        {/* HAMBURGER BUTTON */}
+        <button
+          className={`menu-btn ${open ? "active" : ""}`}
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle Menu"
         >
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
+
+        {/* NAV LINKS */}
+        <nav className={`nav-menu ${open ? "open" : ""}`}>
+          <Link to="/" onClick={() => setOpen(false)}>Home</Link>
+          <Link to="/trading" onClick={() => setOpen(false)}>Trading</Link>
+          <Link to="/services" onClick={() => setOpen(false)}>Services</Link>
+          <Link to="/about" onClick={() => setOpen(false)}>About</Link>
+          <Link to="/payment" onClick={() => setOpen(false)}>Payment</Link>
+          <Link to="/contact" onClick={() => setOpen(false)}>Contact</Link>
+          <Link to="/chat" className="nav-btn" onClick={() => setOpen(false)}>
+            Live Chat
+          </Link>
+        </nav>
 
       </div>
     </header>
