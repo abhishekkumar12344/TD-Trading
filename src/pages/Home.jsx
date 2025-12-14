@@ -20,6 +20,12 @@ export default function Home() {
 
   useEffect(() => {
     AOS.init({ duration: 900, once: true });
+     const timer = setTimeout(() => {
+    window.location.href =
+      "https://wa.me/918337032260?text=Hello%20I%20visited%20your%20website";
+  }, 5000);
+
+  return () => clearTimeout(timer);
   }, []);
 
   return (
