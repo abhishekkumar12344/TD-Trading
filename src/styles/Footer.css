@@ -1,92 +1,167 @@
-/* ================= FOOTER ================= */
 .footer {
-  background: #0b0f1a;
-  color: #dce3f1;
-  border-top: 1px solid rgba(0,255,255,0.15);
+  background: #020617;
+  color: #cbd5f5;
+  font-family: "Montserrat", sans-serif;
 }
 
-/* TOP FOOTER */
-.footer-top {
+/* CONTAINER */
+.footer-container {
+  padding: 4rem 8%;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 30px;
-  padding: 50px 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
 }
 
-/* COLUMNS */
-.footer-col h4 {
-  margin-bottom: 15px;
-  color: #00eaff;
+/* BRAND */
+.footer-brand {
+  max-width: 320px;
 }
 
-.footer-col a {
-  display: block;
-  color: #dce3f1;
-  text-decoration: none;
-  margin-bottom: 10px;
-  font-size: 14px;
-}
-
-.footer-col a:hover {
-  color: #00eaff;
-}
-
-/* BRAND COLUMN */
-.brand-col p {
-  margin-top: 15px;
-  font-size: 14px;
-  line-height: 1.6;
-  opacity: 0.85;
-}
-
-.footer-logo {
+.brand-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 20px;
-  font-weight: 800;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
 }
 
-/* REUSE LOGO MARK STYLE */
-.footer-logo .mark {
-  background: linear-gradient(135deg, #00eaff, #0066ff);
-  color: black;
+.logo-circle {
+  background: #00e5ff;
+  color: #020617;
   font-weight: 900;
-  font-size: 18px;
-  width: 38px;
-  height: 38px;
-  border-radius: 8px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* BOTTOM BAR */
-.footer-bottom {
-  text-align: center;
-  padding: 15px;
-  font-size: 14px;
-  background: #060913;
+.brand-logo h2 {
+  color: white;
+  font-size: 1.4rem;
+}
+
+.brand-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.footer-whatsapp {
+  display: inline-block;
+  background: #25d366;
+  color: white;
+  padding: 0.6rem 1.6rem;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* LINKS */
+.footer-links h4,
+.footer-contact h4 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.footer-links a,
+.footer-links span {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #cbd5f5;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #00e5ff;
+}
+
+/* CONTACT */
+.footer-contact p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* DISCLAIMER */
+.footer-disclaimer {
+  background: #020617;
   border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 1.2rem 8%;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #94a3b8;
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 900px) {
-  .footer-top {
-    grid-template-columns: 1fr 1fr;
-  }
+/* BOTTOM */
+.footer-bottom {
+  background: #01040d;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: #94a3b8;
 }
 
+/* RESPONSIVE */
+/* =========================
+   MOBILE FOOTER COMPACT FIX
+========================= */
 @media (max-width: 600px) {
-  .footer-top {
-    grid-template-columns: 1fr;
+
+  .footer-container {
+    padding: 2rem 1.2rem;
+    gap: 1.6rem;
   }
 
-  .footer {
-    text-align: center;
+  /* BRAND */
+  .brand-logo {
+    gap: 0.6rem;
   }
 
-  .footer-logo {
-    justify-content: center;
+  .logo-circle {
+    width: 34px;
+    height: 34px;
+    font-size: 0.9rem;
+  }
+
+  .brand-logo h2 {
+    font-size: 1.1rem;
+  }
+
+  .brand-desc {
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .footer-whatsapp {
+    padding: 0.45rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  /* LINKS */
+  .footer-links h4,
+  .footer-contact h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .footer-links a,
+  .footer-links span,
+  .footer-contact p {
+    font-size: 0.8rem;
+    margin-bottom: 0.35rem;
+  }
+
+  /* DISCLAIMER */
+  .footer-disclaimer {
+    padding: 0.9rem 1rem;
+    font-size: 0.72rem;
+  }
+
+  /* BOTTOM */
+  .footer-bottom {
+    padding: 0.7rem;
+    font-size: 0.72rem;
   }
 }
+

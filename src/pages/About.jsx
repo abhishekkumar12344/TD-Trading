@@ -1,127 +1,132 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/About.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 
 export default function About() {
-
   useEffect(() => {
-    AOS.init({ duration: 800, once: true });
+    AOS.init({ duration: 900, once: true });
   }, []);
 
   return (
-    <div className="about-page">
+    <div className="about-wrapper">
 
-      {/* ================= HERO ================= */}
+      {/* HERO */}
       <section className="about-hero">
-        <div className="about-overlay">
+        <div className="about-hero-overlay">
           <h1 data-aos="fade-up">About TradeXB Trading</h1>
           <p data-aos="fade-up">
-            Building next-generation trading technology with trust, speed & innovation.
+            A disciplined trading guidance platform built on trust,
+            risk management and realistic expectations.
           </p>
         </div>
       </section>
 
-      {/* ================= STORY ================= */}
+      {/* BRAND STORY */}
       <section className="about-story">
         <h2 data-aos="fade-up">Our Story</h2>
         <p data-aos="fade-up">
-          Prem Parth Trading was founded with a clear mission — to make professional-grade 
-          trading tools accessible to everyone. We combine cutting-edge technology, 
-          real-time data, and secure infrastructure to empower traders of all levels.
+          Most traders fail not because the market is difficult,
+          but because of poor discipline, emotional decisions and
+          lack of proper risk management.
+        </p>
+        <p data-aos="fade-up">
+          TradeXB Trading was created to solve this exact problem —
+          by guiding traders with a structured, transparent and
+          risk-first approach instead of shortcuts or false promises.
         </p>
       </section>
 
-      {/* ================= MISSION & VISION ================= */}
-      <section className="mission-vision">
-        <div className="mv-card" data-aos="fade-right">
-          <h3>🎯 Our Mission</h3>
-          <p>
-            To democratize trading by delivering fast, transparent, and reliable 
-            trading solutions backed by modern technology.
-          </p>
-        </div>
-
-        <div className="mv-card" data-aos="fade-left">
-          <h3>🚀 Our Vision</h3>
-          <p>
-            To become a globally trusted trading platform known for innovation, 
-            security, and trader success.
-          </p>
-        </div>
-      </section>
-
-      {/* ================= STATS ================= */}
+      {/* STATS */}
       <section className="about-stats">
-        <div className="stat-card" data-aos="zoom-in">
-          <h2>10K+</h2>
-          <p>Active Traders</p>
+        <div className="stat-box" data-aos="zoom-in">
+          <h3>15K+</h3>
+          <p>Traders Guided</p>
         </div>
-
-        <div className="stat-card" data-aos="zoom-in">
-          <h2>₹5Cr+</h2>
-          <p>Monthly Volume</p>
+        <div className="stat-box" data-aos="zoom-in" data-aos-delay="100">
+          <h3>4.9★</h3>
+          <p>Average Rating</p>
         </div>
-
-        <div className="stat-card" data-aos="zoom-in">
-          <h2>99.9%</h2>
-          <p>System Uptime</p>
+        <div className="stat-box" data-aos="zoom-in" data-aos-delay="200">
+          <h3>Risk-First</h3>
+          <p>Trading Philosophy</p>
         </div>
-
-        <div className="stat-card" data-aos="zoom-in">
-          <h2>24×7</h2>
-          <p>Customer Support</p>
+        <div className="stat-box" data-aos="zoom-in" data-aos-delay="300">
+          <h3>24×7</h3>
+          <p>Expert Support</p>
         </div>
       </section>
 
-      {/* ================= SECURITY ================= */}
-      <section className="about-security">
-        <h2 data-aos="fade-up">Security & Compliance</h2>
-        <div className="security-grid">
-          <div className="security-card" data-aos="fade-right">
-            <h3>🔐 Bank-Grade Encryption</h3>
-            <p>All user data is protected using AES-256 encryption.</p>
-          </div>
+      {/* FOUNDER */}
+      <section className="about-founder">
+        <div className="founder-card" data-aos="fade-up">
+          <h2>Meet the Expert</h2>
+          <p className="founder-role">Founder & Market Analyst</p>
+          <p>
+            I have been actively involved in Indian stock markets for several
+            years. After witnessing how traders lose capital due to
+            over-trading and emotional decisions, I started TradeXB Trading.
+          </p>
+          <p>
+            Our objective is simple — help traders protect capital,
+            follow discipline and trade with clarity.
+          </p>
+        </div>
+      </section>
 
-          <div className="security-card" data-aos="fade-left">
-            <h3>🛡 Secure Infrastructure</h3>
-            <p>High-availability servers with continuous monitoring.</p>
-          </div>
+      {/* HOW WE WORK */}
+      <section className="about-process">
+        <h2 data-aos="fade-up">How We Work</h2>
+        <div className="process-grid">
+          <div className="process-card" data-aos="fade-up">✔ Capital protection first</div>
+          <div className="process-card" data-aos="fade-up" data-aos-delay="100">✔ Fixed stop-loss rules</div>
+          <div className="process-card" data-aos="fade-up" data-aos-delay="200">✔ No forced trades</div>
+          <div className="process-card" data-aos="fade-up" data-aos-delay="300">✔ Clear WhatsApp guidance</div>
+          <div className="process-card" data-aos="fade-up" data-aos-delay="400">✔ Learning-based approach</div>
+          <div className="process-card" data-aos="fade-up" data-aos-delay="500">✔ No guaranteed profits</div>
+        </div>
+      </section>
 
-          <div className="security-card" data-aos="fade-right">
-            <h3>📜 Transparent Policies</h3>
-            <p>Clear fee structure and transparent operations.</p>
+      {/* TRUST SECTION */}
+      <section className="about-trust">
+        <h2 data-aos="fade-up">Why Traders Trust Us</h2>
+        <div className="trust-grid">
+          <div className="trust-card" data-aos="fade-up">
+            Transparent communication
           </div>
-
-          <div className="security-card" data-aos="fade-left">
-            <h3>⚙ Risk Management</h3>
-            <p>Advanced risk controls to protect traders.</p>
+          <div className="trust-card" data-aos="fade-up" data-aos-delay="150">
+            Real human expert support
+          </div>
+          <div className="trust-card" data-aos="fade-up" data-aos-delay="300">
+            Honest risk disclosure
           </div>
         </div>
       </section>
 
-      {/* ================= JOURNEY ================= */}
-      <section className="about-journey">
-        <h2 data-aos="fade-up">Our Journey</h2>
-
-        <ul>
-          <li data-aos="fade-up">🚀 Platform launched with live trading tools</li>
-          <li data-aos="fade-up">📈 Introduced advanced order execution engine</li>
-          <li data-aos="fade-up">🔒 Upgraded security & infrastructure</li>
-          <li data-aos="fade-up">🌍 Expanded services for global users</li>
-        </ul>
-      </section>
-
-      {/* ================= CTA ================= */}
-      <section className="about-cta">
-        <h2 data-aos="zoom-in">Join the Future of Trading</h2>
-        <p data-aos="zoom-in">
-          Trade smarter with a platform built for performance and trust.
+      {/* DISCLAIMER */}
+      <section className="about-disclaimer">
+        <p>
+          ⚠ Trading involves market risk.  
+          ⚠ Returns are not guaranteed.  
+          ⚠ Past performance does not ensure future results.
         </p>
-        <button data-aos="zoom-in">Create Free Account</button>
       </section>
 
+      {/* CTA */}
+      <section className="about-cta">
+        <h2 data-aos="zoom-in">Ready to Trade With Discipline?</h2>
+        <p data-aos="zoom-in">
+          Speak directly with our expert and understand the process clearly.
+        </p>
+        <a
+          href="https://wa.me/918337032260"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="about-cta-btn"
+        >
+          Talk to Expert on WhatsApp
+        </a>
+      </section>
     </div>
   );
 }

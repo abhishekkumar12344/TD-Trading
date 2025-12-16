@@ -13,7 +13,6 @@ export default function Payment() {
 
   const [activeQR, setActiveQR] = useState(qrImages.phonepe);
   const [copied, setCopied] = useState("");
-  const [file, setFile] = useState(null);
 
   useEffect(() => {
     AOS.init({ duration: 900, once: true });
@@ -26,120 +25,134 @@ export default function Payment() {
   };
 
   return (
-    <div className="payment-page">
+    <div className="payment-wrapper">
 
-      {/* ================= HERO ================= */}
-      <section
-        className="payment-hero"
-        style={{
-          backgroundImage:
-            "url('https://imgs.search.brave.com/O-FdrpMjGZGZVTZvHygb1fECZee8pZVDb0XLc0xMDRY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMjEv/NzQ3LzI4NC9zbWFs/bC9jb2lucy13aXRo/LXRyYWRpbmctY2hh/cnQtaW4tZmluYW5j/aWFsLWNvbmNlcHRz/LXdpdGgtZ3Jvd3Ro/LWZpbmFuY2lhbC1k/YXRhLWNvbmNlcHQt/b3ItaW52ZXN0bWVu/dC1tYXJrZXQtcHJv/Zml0LWJhci1hbmQt/c3VjY2Vzcy1tYXJr/ZXQtc3RvY2stdGVj/aG5vbG9neS1jdXJy/ZW5jeS1yZXBvcnQt/d2l0aC1nZW5lcmF0/aXZlLWFpLXBob3Rv/LmpwZw')",
-        }}
-      >
-        <div className="payment-overlay">
-          <h1 data-aos="fade-up">Fast & Secure UPI Payments</h1>
-          <p data-aos="fade-up">
-            Pay securely using PhonePe, Google Pay, Paytm or BHIM UPI.
-          </p>
-        </div>
-      </section>
-
-      {/* ================= MIN DEPOSIT ================= */}
-      <section className="min-deposit" data-aos="zoom-in">
-        <h2>Minimum Deposit</h2>
-        <p>
-          Start trading with just <strong>₹950</strong>
+      {/* HERO */}
+      <section className="payment-hero">
+        <h1 data-aos="fade-up">Secure Payment & Expert Guidance</h1>
+        <p data-aos="fade-up">
+          Choose your plan carefully. Our guidance focuses on discipline,
+          capital protection, and consistency — not gambling.
         </p>
       </section>
 
-      {/* ================= QR SECTION ================= */}
-      <section className="qr-section">
-        <h2 data-aos="fade-up">Scan & Pay Using UPI</h2>
+      {/* EXPERT PLANS */}
+      <section className="payment-plans">
+        <h2 data-aos="fade-up">Expert Analysis Plans</h2>
+
+        <div className="plans-grid">
+
+          <div className="plan-card" data-aos="zoom-in">
+            <h3>Starter Plan</h3>
+            <p className="amount">₹950</p>
+            <p className="returns">Potential: ₹15k – ₹25k / month*</p>
+            <ul>
+              <li>✔ Intraday analysis</li>
+              <li>✔ Beginner-friendly</li>
+              <li>✔ WhatsApp support</li>
+            </ul>
+          </div>
+
+          <div className="plan-card popular" data-aos="zoom-in">
+            <span className="tag">Most Popular</span>
+            <h3>Pro Trader Plan</h3>
+            <p className="amount">₹1,500 – ₹3,000</p>
+            <p className="returns">Potential: ₹30k – ₹50k / month*</p>
+            <ul>
+              <li>✔ Intraday + Swing</li>
+              <li>✔ Priority expert access</li>
+              <li>✔ Risk-managed trades</li>
+            </ul>
+          </div>
+
+          <div className="plan-card" data-aos="zoom-in">
+            <h3>Advanced Plan</h3>
+            <p className="amount">₹5,000 – ₹10,000</p>
+            <p className="returns">Potential: ₹70k – ₹1L / month*</p>
+            <ul>
+              <li>✔ Advanced market research</li>
+              <li>✔ Capital protection focus</li>
+              <li>✔ Dedicated support</li>
+            </ul>
+          </div>
+
+          <div className="plan-card elite" data-aos="zoom-in">
+            <h3>Elite Trader Plan</h3>
+            <p className="amount">₹15,000+</p>
+            <p className="returns">Potential: ₹1.5L – ₹2.5L / month*</p>
+            <ul>
+              <li>✔ One-to-one expert</li>
+              <li>✔ Customized strategy</li>
+              <li>✔ Priority guidance</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <p className="note">
+          *Returns are indicative and depend on market conditions.
+        </p>
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section className="payment-steps">
+        <h2 data-aos="fade-up">How It Works</h2>
+        <div className="steps-grid">
+          <div className="step">1. Choose plan</div>
+          <div className="step">2. Make UPI payment</div>
+          <div className="step">3. Share screenshot</div>
+          <div className="step">4. Expert connects</div>
+        </div>
+      </section>
+
+      {/* PAYMENT */}
+      <section className="payment-methods">
+        <h2 data-aos="fade-up">Pay via UPI</h2>
 
         <div className="qr-switch">
-          <button
-            className={activeQR === qrImages.phonepe ? "active" : ""}
-            onClick={() => setActiveQR(qrImages.phonepe)}
-          >
-            PhonePe
-          </button>
-          <button
-            className={activeQR === qrImages.gpay ? "active" : ""}
-            onClick={() => setActiveQR(qrImages.gpay)}
-          >
-            Google Pay
-          </button>
-          <button
-            className={activeQR === qrImages.paytm ? "active" : ""}
-            onClick={() => setActiveQR(qrImages.paytm)}
-          >
-            Paytm
-          </button>
-          <button
-            className={activeQR === qrImages.bhim ? "active" : ""}
-            onClick={() => setActiveQR(qrImages.bhim)}
-          >
-            BHIM
-          </button>
+          <button onClick={() => setActiveQR(qrImages.phonepe)}>PhonePe</button>
+          <button onClick={() => setActiveQR(qrImages.gpay)}>GPay</button>
+          <button onClick={() => setActiveQR(qrImages.paytm)}>Paytm</button>
+          <button onClick={() => setActiveQR(qrImages.bhim)}>BHIM</button>
         </div>
 
         <div className="qr-box" data-aos="zoom-in">
-          <img src={activeQR} alt="UPI QR Code" />
-          <p>Scan this QR with selected UPI app</p>
+          <img src={activeQR} alt="UPI QR" />
+          <p>Scan QR with your UPI app</p>
         </div>
       </section>
 
-      {/* ================= UPI DETAILS ================= */}
+      {/* UPI DETAILS */}
       <section className="upi-details">
-        <h2 data-aos="fade-up">UPI Payment Details</h2>
+        <h2 data-aos="fade-up">UPI Details</h2>
 
-        <div className="upi-grid">
-          <div className="upi-card">
-            <span>Primary UPI ID</span>
-            <div className="upi-row">
-              <strong>treadxb@upi</strong>
-              <button onClick={() => copyUPI("treadxb@upi")}>Copy</button>
-            </div>
-            {copied === "treadxb@upi" && <small>✔ Copied</small>}
-          </div>
-
-          <div className="upi-card">
-            <span>Alternate UPI ID</span>
-            <div className="upi-row">
-              <strong>treadxb.pay@upi</strong>
-              <button onClick={() => copyUPI("treadxb.pay@upi")}>Copy</button>
-            </div>
-            {copied === "treadxb.pay@upi" && <small>✔ Copied</small>}
-          </div>
-
-          <div className="upi-card">
-            <span>Account Name</span>
-            <strong>TREADXB</strong>
-          </div>
+        <div className="upi-card">
+          <strong>tradexb@upi</strong>
+          <button onClick={() => copyUPI("tradexb@upi")}>Copy</button>
+          {copied && <small>✔ Copied</small>}
         </div>
+
+        <p className="account-name">Account Name: Prem Parth Enterprises</p>
       </section>
 
-      {/* ================= UPLOAD SCREENSHOT ================= */}
-      <section className="upload-section" data-aos="fade-up">
-        <h2>Upload Payment Screenshot</h2>
-        <p>Upload proof after successful payment for faster verification.</p>
-
-        <div className="upload-box">
-          <input
-            type="file"
-            accept="image/*"
-            onChange={(e) => setFile(e.target.files[0])}
-          />
-          {file && <span className="file-name">✔ {file.name}</span>}
-          <button className="upload-btn">Submit Screenshot</button>
-        </div>
+      {/* CTA */}
+      <section className="payment-cta">
+        <h2>Confirm Payment on WhatsApp</h2>
+        <a
+          href="https://wa.me/918337032260"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary"
+        >
+          Send Screenshot & Start
+        </a>
       </section>
 
-      {/* ================= SECURITY ================= */}
-      <section className="payment-security">
-        <h2>100% Secure & Trusted</h2>
+      {/* DISCLAIMER */}
+      <section className="payment-disclaimer">
         <p>
-          We never store your UPI details. All payments are user-initiated and secure.
+          ⚠ Trading involves market risk. Payments are non-refundable as this
+          is a professional guidance service.
         </p>
       </section>
 

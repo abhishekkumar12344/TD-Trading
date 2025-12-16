@@ -10,11 +10,11 @@ export default function WhatsAppPopup() {
 
   useEffect(() => {
     // 🔁 Popup every 5 seconds on ALL pages
-    const interval = setInterval(() => {
-      setShowPopup(true);
-    }, 5000);
+    // const interval = setInterval(() => {
+    //   setShowPopup(true);
+    // }, 5000);
 
-    return () => clearInterval(interval);
+    // return () => clearInterval(interval);
   }, []);
 
   return (

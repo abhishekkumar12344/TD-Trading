@@ -1,156 +1,291 @@
-/* ================= HERO ================= */
+/* About.css - Professional Styling for TradeXB Trading About Page */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* .about-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+} */
+
+/* HERO SECTION */
 .about-hero {
-  height: 65vh;
-  background-image: url("https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1400&q=80");
+  position: relative;
+  height: 70vh;
+  min-height: 500px;
+  background-image: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'); /* Real stock market/trading image from Unsplash */
   background-size: cover;
   background-position: center;
-  position: relative;
-}
-
-.about-overlay {
-  background: rgba(0, 0, 0, 0.65);
-  height: 100%;
+  background-attachment: fixed;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   color: white;
-  text-align: center;
-  padding: 20px;
 }
 
-.about-overlay h1 {
-  font-size: 48px;
+.about-hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 600px;
 }
 
-.about-overlay p {
-  font-size: 18px;
-  max-width: 700px;
-  margin-top: 10px;
+.about-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* ================= STORY ================= */
+.about-hero p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* BRAND STORY */
 .about-story {
-  padding: 60px 20px;
+  padding: 80px 0;
   text-align: center;
-  background: #0b0f1a;
-  color: #dce3f1;
+  background-color: white;
+}
+
+.about-story h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #2c3e50;
 }
 
 .about-story p {
-  max-width: 900px;
-  margin: auto;
-  line-height: 1.7;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  color: #555;
 }
 
-/* ================= MISSION & VISION ================= */
-.mission-vision {
-  display: flex;
-  gap: 30px;
-  padding: 60px 20px;
-  background: #111827;
-  flex-wrap: wrap;
-}
-
-.mv-card {
-  flex: 1;
-  background: #0b0f1a;
-  padding: 30px;
-  border-radius: 12px;
-  border: 1px solid rgba(0,255,255,0.2);
-  color: white;
-}
-
-/* ================= STATS ================= */
+/* STATS */
 .about-stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  padding: 60px 20px;
-  gap: 25px;
-  background: #0b0f1a;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 60px 0;
+  background-color: #f1f3f4;
 }
 
-.stat-card {
-  background: #111827;
-  padding: 25px;
-  border-radius: 12px;
+.stat-box {
   text-align: center;
-  border: 1px solid rgba(0,255,255,0.2);
-  color: white;
+  flex: 1;
+  min-width: 200px;
+  margin: 20px;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.stat-card h2 {
-  color: #00eaff;
-  font-size: 32px;
-}
-
-/* ================= SECURITY ================= */
-.about-security {
-  padding: 60px 20px;
-  background: #111827;
-  color: white;
-  text-align: center;
-}
-
-.security-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.security-card {
-  background: #0b0f1a;
-  padding: 25px;
-  border-radius: 12px;
-  border: 1px solid rgba(0,255,255,0.2);
-}
-
-/* ================= JOURNEY ================= */
-.about-journey {
-  padding: 60px 20px;
-  background: #0b0f1a;
-  color: white;
-  text-align: center;
-}
-
-.about-journey ul {
-  list-style: none;
-  padding: 0;
-}
-
-.about-journey li {
-  margin: 15px 0;
-  font-size: 18px;
-}
-
-/* ================= CTA ================= */
-.about-cta {
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #00eaff, #0066ff);
-  text-align: center;
-  color: black;
-}
-
-.about-cta button {
-  margin-top: 15px;
-  padding: 14px 30px;
-  border: none;
-  border-radius: 8px;
-  background: black;
-  color: white;
-  font-size: 18px;
+.stat-box h3 {
+  font-size: 2.5rem;
   font-weight: 700;
-  cursor: pointer;
+  color: #3498db;
+  margin-bottom: 10px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .about-overlay h1 {
-    font-size: 34px;
-  }
+.stat-box p {
+  font-size: 1rem;
+  color: #666;
+}
 
-  .mission-vision {
+/* FOUNDER */
+.about-founder {
+  padding: 80px 0;
+  background-color: white;
+  text-align: center;
+}
+
+.founder-card {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.founder-card h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.founder-role {
+  font-size: 1.1rem;
+  color: #3498db;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.founder-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* HOW WE WORK */
+.about-process {
+  padding: 80px 0;
+  background-color: #f1f3f4;
+  text-align: center;
+}
+
+.about-process h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 50px;
+  color: #2c3e50;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.process-card {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* TRUST SECTION */
+.about-trust {
+  padding: 80px 0;
+  background-color: white;
+  text-align: center;
+}
+
+.about-trust h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 50px;
+  color: #2c3e50;
+}
+
+.trust-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.trust-card {
+  flex: 1;
+  min-width: 250px;
+  padding: 30px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* DISCLAIMER */
+.about-disclaimer {
+  padding: 40px 0;
+  background-color: #e74c3c;
+  color: white;
+  text-align: center;
+}
+
+.about-disclaimer p {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+/* CTA */
+.about-cta {
+  padding: 80px 0;
+  background-color: #3498db;
+  color: white;
+  text-align: center;
+}
+
+.about-cta h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about-cta p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.about-cta-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #2980b9;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.about-cta-btn:hover {
+  background-color: #21618c;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .about-hero p {
+    font-size: 1rem;
+  }
+  
+  .about-stats {
     flex-direction: column;
+    align-items: center;
+  }
+  
+  .stat-box {
+    min-width: 80%;
+  }
+  
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .trust-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .trust-card {
+    min-width: 80%;
   }
 }

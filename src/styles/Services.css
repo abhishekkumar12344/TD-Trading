@@ -1,169 +1,297 @@
-/* ================= HERO SECTION ================= */
-.service-hero {
-  background-image: url("https://images.unsplash.com/photo-1642790773921-cc8ad13cf5df?auto=format&fit=crop&w=1400&q=80");
-  background-size: cover;
-  background-position: center;
-  height: 70vh;
-  position: relative;
+/* Services.css - Professional and Attractive Styling */
+
+.services-page {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa; /* Light gray background for a clean look */
 }
 
-.hero-overlay {
-  background: rgba(0, 0, 0, 0.6);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+/* ================= HERO ================= */
+.services-hero {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); /* Attractive blue gradient */
   color: white;
-  padding: 20px;
+  padding: 80px 20px;
+  text-align: center;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero-overlay h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
-
-.hero-overlay p {
-  font-size: 18px;
-  max-width: 700px;
+.services-hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
   margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.hero-btn {
-  padding: 12px 25px;
-  background: #00eaff;
-  color: black;
-  border: none;
-  border-radius: 8px;
-  font-size: 18px;
-  cursor: pointer;
-  font-weight: 700;
-  box-shadow: 0 0 12px #00eaff;
+.services-hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* ================= SERVICES GRID ================= */
-.service-grid {
+.btn-primary {
+  background-color: #28a745; /* Green accent */
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* ================= CORE SERVICES ================= */
+.services-section {
   padding: 60px 20px;
   text-align: center;
+  background-color: white;
 }
 
-.service-grid h2 {
-  margin-bottom: 30px;
+.services-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #007bff;
 }
 
-.grid-container {
+.services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .service-card {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 25px;
-  border-radius: 12px;
-  color: white;
-  border: 1px solid rgba(0, 255, 255, 0.2);
-  transition: 0.3s;
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.service-card img {
-  width: 70px;
+.service-card h3 {
+  font-size: 1.5rem;
+  color: #007bff;
   margin-bottom: 15px;
 }
 
-/* ================= WHY US ================= */
-.why-us {
+.service-card p {
+  color: #666;
+}
+
+/* ================= EXPERT ANALYSIS PLANS ================= */
+.analysis-plans {
   padding: 60px 20px;
+  background-color: #f8f9fa;
   text-align: center;
 }
 
-.why-grid {
+.analysis-plans h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.plans-sub {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.plans-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.why-card {
-  padding: 20px;
+.plan-card {
+  background-color: white;
+  padding: 30px;
   border-radius: 10px;
-  background: #111827;
-  border: 1px solid rgba(0, 255, 255, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ================= PAYMENTS ================= */
-.payments {
-  padding: 60px 20px;
-  text-align: center;
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.pay-logos img {
-  height: 60px;
-  margin: 10px 20px;
+.plan-card.highlight {
+  border: 3px solid #28a745; /* Green border for popular plan */
 }
 
-/* ================= TESTIMONIALS ================= */
-.testimonials {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.test-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 20px;
-}
-
-.test-card {
-  background: #111827;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid rgba(0, 255, 255, 0.2);
-}
-
-/* ================= FAQ ================= */
-.faq {
-  padding: 60px 20px;
-}
-
-.faq-item {
-  background: #111827;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  border: 1px solid rgba(0, 255, 255, 0.2);
-}
-
-/* ================= CTA ================= */
-.cta {
-  padding: 60px 20px;
-  text-align: center;
-  background: #0b0f1a;
+.badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #28a745;
   color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
-.cta-btn {
-  padding: 12px 30px;
-  background: #00eaff;
-  border: none;
-  border-radius: 8px;
-  color: black;
-  font-size: 20px;
-  font-weight: 700;
-  box-shadow: 0 0 15px #00eaff;
-  cursor: pointer;
+.plan-card h3 {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 10px;
 }
 
-/* Responsive */
-@media (max-width: 700px) {
-  .hero-overlay h1 {
-    font-size: 32px;
+.invest {
+  font-size: 1.2rem;
+  color: #28a745;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.profit {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.plan-card li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.plan-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.plan-btn:hover {
+  background-color: #0056b3;
+}
+
+.plans-note {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 40px;
+}
+
+/* ================= PROCESS ================= */
+.services-process {
+  padding: 60px 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.services-process h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #007bff;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.process-card {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  color: #007bff;
+  transition: transform 0.3s ease;
+}
+
+.process-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ================= DISCLAIMER ================= */
+.services-disclaimer {
+  padding: 40px 20px;
+  background-color: #e9ecef;
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* ================= FINAL CTA ================= */
+.services-cta {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #28a745 0%, #218838 100%); /* Green gradient */
+  color: white;
+  text-align: center;
+}
+
+.services-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.services-cta p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 768px) {
+  .services-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .services-hero-content p {
+    font-size: 1rem;
+  }
+
+  .services-section h2,
+  .analysis-plans h2,
+  .services-process h2,
+  .services-cta h2 {
+    font-size: 2rem;
+  }
+
+  .services-grid,
+  .plans-grid,
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-primary,
+  .plan-btn {
+    padding: 12px 20px;
   }
 }

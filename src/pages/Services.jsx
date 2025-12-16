@@ -3,161 +3,174 @@ import "../styles/Services.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export default function Service() {
-
+export default function Services() {
   useEffect(() => {
-    AOS.init({ duration: 800, once: true });
+    AOS.init({ duration: 900, once: true });
   }, []);
 
   return (
-    <div className="service-page">
+    <div className="services-page">
 
-      {/* ================= HERO SECTION ================= */}
-      <section className="service-hero">
-        <div className="hero-overlay">
-          <h1 data-aos="fade-up">Professional Trading Services</h1>
+      {/* ================= HERO ================= */}
+      <section className="services-hero">
+        <div className="services-hero-content">
+          <h1 data-aos="fade-up">Professional Trading Guidance</h1>
           <p data-aos="fade-up">
-            Experience ultra-fast execution, real-time market data, and a secure trading environment.
+            Disciplined market analysis with risk-managed trading support.
+            No shortcuts. No false promises.
           </p>
-          <button data-aos="fade-up" className="hero-btn">Start Trading</button>
+
+          <a
+            href="https://wa.me/918337032260"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
+            Talk to Expert on WhatsApp
+          </a>
         </div>
       </section>
 
-      {/* ================= SERVICES GRID ================= */}
-      <section className="service-grid">
+      {/* ================= CORE SERVICES ================= */}
+      <section className="services-section">
         <h2 data-aos="fade-up">Our Core Services</h2>
 
-        <div className="grid-container">
-
-          <div className="service-card" data-aos="fade-right">
-            <img src="https://cdn-icons-png.flaticon.com/512/2906/2906274.png" alt="" />
-            <h3>Real-Time Market Data</h3>
-            <p>Live WebSocket price updates, order books, depth charts & more.</p>
+        <div className="services-grid">
+          <div className="service-card" data-aos="fade-up">
+            <h3>Intraday Trading Guidance</h3>
+            <p>
+              Short-term market analysis with predefined entry,
+              stop-loss and disciplined execution.
+            </p>
           </div>
 
-          <div className="service-card" data-aos="fade-left">
-            <img src="https://cdn-icons-png.flaticon.com/512/8676/8676339.png" alt="" />
-            <h3>Advanced Trading Engine</h3>
-            <p>Execute Market, Limit, Stop orders with instant fill system.</p>
+          <div className="service-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Swing Trading Analysis</h3>
+            <p>
+              Medium-term trading opportunities based on market
+              structure and trend analysis.
+            </p>
           </div>
 
-          <div className="service-card" data-aos="fade-right">
-            <img src="https://cdn-icons-png.flaticon.com/512/6195/6195699.png" alt="" />
-            <h3>AI Trading Tools</h3>
-            <p>Smart trend analysis, candle pattern detection & risk analysis.</p>
+          <div className="service-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>Risk Management Support</h3>
+            <p>
+              Capital protection through proper position sizing
+              and strict risk control rules.
+            </p>
           </div>
 
-          <div className="service-card" data-aos="fade-left">
-            <img src="https://cdn-icons-png.flaticon.com/512/9375/9375813.png" alt="" />
-            <h3>Portfolio Tracking</h3>
-            <p>Complete P/L tracking, open positions, and order history.</p>
+          <div className="service-card" data-aos="fade-up" data-aos-delay="300">
+            <h3>One-to-One Expert Support</h3>
+            <p>
+              Direct WhatsApp guidance to understand trades,
+              risk and market behaviour clearly.
+            </p>
           </div>
-
-          <div className="service-card" data-aos="fade-right">
-            <img src="https://cdn-icons-png.flaticon.com/512/2331/2331949.png" alt="" />
-            <h3>Instant UPI Payments</h3>
-            <p>Fast deposits using QR, UPI, PhonePe, GPay & more.</p>
-          </div>
-
-          <div className="service-card" data-aos="fade-left">
-            <img src="https://cdn-icons-png.flaticon.com/512/1813/1813452.png" alt="" />
-            <h3>24/7 Support</h3>
-            <p>Our support team is available around the clock to assist you.</p>
-          </div>
-
         </div>
       </section>
 
-      {/* ================= WHY CHOOSE US ================= */}
-      <section className="why-us">
-        <h2 data-aos="fade-up">Why Choose Us?</h2>
+      {/* ================= EXPERT ANALYSIS PLANS ================= */}
+      <section className="analysis-plans">
+        <h2 data-aos="fade-up">Expert Analysis Plans</h2>
+        <p className="plans-sub" data-aos="fade-up">
+          Plans designed with disciplined analysis and proper risk management.  
+          Returns are indicative and depend on market conditions.
+        </p>
 
-        <div className="why-grid">
+        <div className="plans-grid">
 
-          <div className="why-card" data-aos="zoom-in">
-            <h3>99.9% Uptime</h3>
-            <p>Trade reliably with our secure & powerful servers.</p>
+          <div className="plan-card" data-aos="zoom-in">
+            <h3>Starter Plan</h3>
+            <p className="invest">Investment: ₹950</p>
+            <p className="profit">Potential Monthly Return: ₹20,000 – ₹25,000*</p>
+
+            <ul>
+              <li>✔ Intraday trade analysis</li>
+              <li>✔ Low-risk approach</li>
+              <li>✔ WhatsApp expert support</li>
+            </ul>
+
+            <a href="https://wa.me/918337032260" className="plan-btn">
+              Talk to Expert
+            </a>
           </div>
 
-          <div className="why-card" data-aos="zoom-in">
-            <h3>Bank-Level Security</h3>
-            <p>Your funds and data are protected with AES encryption.</p>
+          <div className="plan-card highlight" data-aos="zoom-in" data-aos-delay="150">
+            <span className="badge">Most Popular</span>
+            <h3>Pro Trader Plan</h3>
+            <p className="invest">Investment: ₹1,500</p>
+            <p className="profit">Potential Monthly Return: ₹30,000 – ₹40,000*</p>
+
+            <ul>
+              <li>✔ Intraday + Swing analysis</li>
+              <li>✔ Priority expert guidance</li>
+              <li>✔ Strict risk management</li>
+            </ul>
+
+            <a href="https://wa.me/918337032260" className="plan-btn">
+              Talk to Expert
+            </a>
           </div>
 
-          <div className="why-card" data-aos="zoom-in">
-            <h3>Ultra-Fast Execution</h3>
-            <p>Experience lightning-fast order execution engine.</p>
+          <div className="plan-card" data-aos="zoom-in" data-aos-delay="300">
+            <h3>Elite Plan</h3>
+            <p className="invest">Investment: ₹3,000</p>
+            <p className="profit">Potential Monthly Return: ₹50,000 – ₹70,000*</p>
+
+            <ul>
+              <li>✔ Advanced market research</li>
+              <li>✔ Capital protection focus</li>
+              <li>✔ Dedicated expert support</li>
+            </ul>
+
+            <a href="https://wa.me/918337032260" className="plan-btn">
+              Talk to Expert
+            </a>
           </div>
 
-          <div className="why-card" data-aos="zoom-in">
-            <h3>Transparent Pricing</h3>
-            <p>No hidden fees. Full transparency guaranteed.</p>
-          </div>
+        </div>
 
+        <p className="plans-note">
+          *Returns are indicative, not guaranteed. Trading involves market risk.
+        </p>
+      </section>
+
+      {/* ================= PROCESS ================= */}
+      <section className="services-process">
+        <h2 data-aos="fade-up">How Our Guidance Works</h2>
+
+        <div className="process-grid">
+          <div className="process-card">Market Analysis</div>
+          <div className="process-card">Risk-Defined Trade Setup</div>
+          <div className="process-card">WhatsApp Communication</div>
+          <div className="process-card">Discipline & Review</div>
         </div>
       </section>
 
-      {/* ================= PAYMENT METHODS ================= */}
-      <section className="payments">
-        <h2 data-aos="fade-up">Supported Payment Methods</h2>
-
-        <div className="pay-logos">
-          <img data-aos="fade-up" src="https://upload.wikimedia.org/wikipedia/commons/1/13/PhonePe_Logo.png" alt="PhonePe" />
-          <img data-aos="fade-up" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Google_Pay_Logo.svg" alt="GPay" />
-          <img data-aos="fade-up" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/BHIM_upi_logo.png" alt="UPI" />
-          <img data-aos="fade-up" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Paytm_logo.png/799px-Paytm_logo.png" alt="Paytm" />
-        </div>
+      {/* ================= DISCLAIMER ================= */}
+      <section className="services-disclaimer">
+        <p>
+          ⚠ Trading involves market risk.  
+          ⚠ Returns are not guaranteed.  
+          ⚠ Losses are part of trading.
+        </p>
       </section>
 
-      {/* ================= TESTIMONIALS ================= */}
-      <section className="testimonials">
-        <h2 data-aos="fade-up">What Our Traders Say</h2>
-
-        <div className="test-grid">
-
-          <div className="test-card" data-aos="fade-right">
-            <p>“Amazing real-time data accuracy. Best trading UI ever!”</p>
-            <h4>— Rohan Verma</h4>
-          </div>
-
-          <div className="test-card" data-aos="fade-left">
-            <p>“Fast execution and clean interface. Highly recommended!”</p>
-            <h4>— Anjali Sharma</h4>
-          </div>
-
-          <div className="test-card" data-aos="fade-right">
-            <p>“UPI deposit option makes things super easy!”</p>
-            <h4>— Aditya Kumar</h4>
-          </div>
-
-        </div>
-      </section>
-
-      {/* ================= FAQ ================= */}
-      <section className="faq">
-        <h2 data-aos="fade-up">Frequently Asked Questions</h2>
-
-        <div className="faq-item" data-aos="fade-up">
-          <h3>How do I start trading?</h3>
-          <p>Just create an account, deposit funds via UPI, and start trading instantly.</p>
-        </div>
-
-        <div className="faq-item" data-aos="fade-up">
-          <h3>Is my money safe?</h3>
-          <p>Yes, we use bank-grade encryption and secure storage for user funds.</p>
-        </div>
-
-        <div className="faq-item" data-aos="fade-up">
-          <h3>Do you support UPI?</h3>
-          <p>Yes! We support QR, PhonePe, GPay, Paytm, and BHIM UPI.</p>
-        </div>
-      </section>
-
-      {/* ================= CTA ================= */}
-      <section className="cta">
-        <h2 data-aos="zoom-in">Ready to Level Up Your Trading?</h2>
-        <p data-aos="zoom-in">Join thousands of traders growing with our platform.</p>
-        <button data-aos="zoom-in" className="cta-btn">Create Account</button>
+      {/* ================= FINAL CTA ================= */}
+      <section className="services-cta">
+        <h2 data-aos="zoom-in">Need Clear & Honest Guidance?</h2>
+        <p data-aos="zoom-in">
+          Speak directly with our expert before starting.
+        </p>
+        <a
+          href="https://wa.me/918337032260"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary"
+        >
+          Chat on WhatsApp
+        </a>
       </section>
 
     </div>
