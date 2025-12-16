@@ -11,7 +11,7 @@ export default function Header() {
 
         {/* LOGO */}
         <Link to="/" className="logo-area" onClick={() => setOpen(false)}>
-          <img src="/logo/logo.png" alt="Cobra Trading Logo" />
+          <img src="/logo/logo.png " alt="Cobra Trading Logo" />
           <span>COBRA TRADING</span>
         </Link>
 

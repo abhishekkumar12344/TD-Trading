@@ -3,7 +3,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: #0e1525;
+  background: #191919;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
@@ -25,8 +25,8 @@
 }
 
 .logo-area img {
-  width: 46px;
-  height: 46px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
 }
 
@@ -144,7 +144,7 @@
   }
 
   .logo-area img {
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
   }
 }
