@@ -45,7 +45,7 @@ export default function Payment() {
           <div className="plan-card" data-aos="zoom-in">
             <h3>Starter Plan</h3>
             <p className="amount">₹950</p>
-            <p className="returns">Potential: ₹15k – ₹25k / month*</p>
+            <p className="returns">Potential: ₹15k – ₹25k / Day*</p>
             <ul>
               <li>✔ Intraday analysis</li>
               <li>✔ Beginner-friendly</li>
