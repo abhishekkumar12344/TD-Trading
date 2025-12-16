@@ -57,7 +57,7 @@ export default function Payment() {
             <span className="tag">Most Popular</span>
             <h3>Pro Trader Plan</h3>
             <p className="amount">₹1,500 – ₹3,000</p>
-            <p className="returns">Potential: ₹30k – ₹50k / month*</p>
+            <p className="returns">Potential: ₹30k – ₹50k / Day*</p>
             <ul>
               <li>✔ Intraday + Swing</li>
               <li>✔ Priority expert access</li>
@@ -68,7 +68,7 @@ export default function Payment() {
           <div className="plan-card" data-aos="zoom-in">
             <h3>Advanced Plan</h3>
             <p className="amount">₹5,000 – ₹10,000</p>
-            <p className="returns">Potential: ₹70k – ₹1L / month*</p>
+            <p className="returns">Potential: ₹70k – ₹1L / Day*</p>
             <ul>
               <li>✔ Advanced market research</li>
               <li>✔ Capital protection focus</li>
@@ -79,7 +79,7 @@ export default function Payment() {
           <div className="plan-card elite" data-aos="zoom-in">
             <h3>Elite Trader Plan</h3>
             <p className="amount">₹15,000+</p>
-            <p className="returns">Potential: ₹1.5L – ₹2.5L / month*</p>
+            <p className="returns">Potential: ₹1.5L – ₹2.5L / Day*</p>
             <ul>
               <li>✔ One-to-one expert</li>
               <li>✔ Customized strategy</li>
